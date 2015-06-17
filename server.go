@@ -25,6 +25,8 @@ type Router struct {
 }
 
 func (r Router) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
+	log.Println(req.RemoteAddr + " request ..." + req.RequestURI)
+
 	h := http.FileServer(http.Dir("."))
 	h.ServeHTTP(rw, req)
 }
