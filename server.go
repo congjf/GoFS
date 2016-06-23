@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	log.Println("GoFS:")
+	log.Println("GoFS: http://127.0.0.1:8888/")
 
 	var router Router
 
